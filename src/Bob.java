@@ -12,7 +12,8 @@ public class Bob {
 
         do {
             System.out.println(message);
-            String userResponse = bob.next();
+//can use bob.nextLine...instead of using the int qMark*****************
+            String userResponse = bob.next().trim();
             int qMark = userResponse.lastIndexOf("?");
 
             if (qMark > 0) {
