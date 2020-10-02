@@ -9,7 +9,7 @@ public class MethodExercises {
 
         System.out.println(getInteger(20,30));
 
-        System.out.println(getFactorial(getInteger(1,10)));
+        System.out.println(getFactorial(2));
 
 
 
@@ -51,7 +51,11 @@ public class MethodExercises {
 
     public static int getFactorial(int number){
         Scanner newScan = new Scanner(System.in);
+        System.out.println("enter a number between 1 and 10");
+        int userRes = newScan.nextInt();
+        return number;
     }
+
 
 
 
