@@ -30,15 +30,33 @@ public class ControlFLowExercises {
         boolean userCont = true;
 
         do {
-            System.out.println();
+            System.out.println("Enter a Grade.");
+            int grade = number.nextInt();
+
+            if(grade<= 59){
+                System.out.println("F");
+            } else if(
+            grade <= 66 && grade >=60){
+                System.out.println("D");
+            } else if(
+            grade <=79 && grade >= 67){
+                System.out.println("C");
+            } else if(
+            grade <=87 && grade >= 80){
+                System.out.println("B");
+            } else if (
+            grade >= 88){
+                System.out.println("A");
+            }
+            System.out.println("Any More Grades? Y/N?");
+            String userResponse = number.next();
+            if(!userResponse.equalsIgnoreCase("y")){
+                userCont = false;
+            }
+
+
         }
-
-
-
-
-
-
-
+        while(userCont);
 
 
 
