@@ -53,7 +53,12 @@ public class MethodExercises {
         Scanner newScan = new Scanner(System.in);
         System.out.println("enter a number between 1 and 10");
         int userRes = newScan.nextInt();
-        return number;
+
+        for(int i = 0;i<userRes; i++){
+            System.out.println(i);
+        }
+       return userRes;
+//        make  for loop to iterate through numbers 1 through user int
     }
 
 
