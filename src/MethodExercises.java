@@ -38,8 +38,8 @@ public class MethodExercises {
 
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("What is Your Age?");
-        int userAnswer = scan.nextInt();
+        System.out.println("Number between " + min + " and " + max);
+        int userAnswer = Integer.parseInt(scan.nextLine());
 
         if (userAnswer > min && userAnswer < max) {
             System.out.println("this is in range!");
@@ -51,21 +51,22 @@ public class MethodExercises {
     }
 
 
-    public static int getFactorial(int number) {
-        Scanner newScan = new Scanner(System.in);
-        System.out.println("enter a number between 1 and 10");
-        long userRes = newScan.nextInt();
-        if (userRes > 0 && userRes < 11) {
-            System.out.println("this is in range!");
-//            return userRes;
-        } else {
-            System.out.println("try again.");
-            return getFactorial(number);
-        }
-        ;
+    public static long getFactorial(int number) {
+        int userInput = getInteger(1,10);
+//        Scanner newScan = new Scanner(System.in);
+//        System.out.println("enter a number between 1 and 10");
+//        long userRes = newScan.nextInt();
+//        if (userRes > 0 && userRes < 11) {
+//            System.out.println("this is in range!");
+////            return userRes;
+//        } else {
+//            System.out.println("try again.");
+//            return getFactorial(number);
+//        }
+//        ;
 
         int fact = 1;
-        for (int i = 2; i <= userRes; i++) {
+        for (int i = 2; i <= userInput; i++) {
             fact = fact * i;
             System.out.println(i);
         }
@@ -73,12 +74,12 @@ public class MethodExercises {
 
     }
 
-    public static int cont(int userCont) {
+    public static long cont(int userCont) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Would you like to continue?");
         String yesNo = scan.nextLine();
         do {
-            return getFactorial(1);
+            return getFactorial(0);
         } while(yesNo.equalsIgnoreCase("yes") || yesNo.equalsIgnoreCase("y"));
 
 
