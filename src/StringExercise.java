@@ -1,6 +1,6 @@
 public class StringExercise {
     public static void main(String[] args) {
-     String floyd = "We don't need no education\n" +
+     String floyd = "12" +
              "We don't need no thought control";
      String check = "Check \"this\" out!, \"s inside of \"s!";
      String windows = "In windows, the main drive is usually C:\\";
