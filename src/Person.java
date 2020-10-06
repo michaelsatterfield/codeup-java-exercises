@@ -1,4 +1,6 @@
 public class Person {
+//    has private name property:
+
    private String name;
    private String age;
    private String gender;
@@ -11,6 +13,7 @@ public class Person {
    public Person(String personName){
        this.name = personName;
        this.age = "unassigned";
+       this.gender = "unassigned";
 
    }
     public Person(String personName,String personAge){
@@ -24,6 +27,12 @@ public class Person {
         this.gender = personGender;
     }
 
+// ******methods***
+
+    public void setName(String name){
+      this.name = name;
+    }
+
     public String getName(){
        return String.format("name: %s. age: %s, gender: %s", name, age, gender);
     }
@@ -33,11 +42,14 @@ public class Person {
 
 
     public static void main(String[] args) {
-       Person p1 = new Person("Jon Bitters","35","Male");
-       Person p2 = new Person("Itzel Flores",".5", "Female");
+
+        Person p1 = new Person("Jon Bitters","35","Male");
+        Person p2 = new Person("Itzel Flores",".5", "Female");
+
         System.out.println(p1.getName());
         System.out.println(p1.sayHello());
-//       person 2
+
+    //       person 2
         System.out.println(p2.getName());
         System.out.println(p2.sayHello());
 
@@ -58,13 +70,14 @@ public class Person {
 
 // ***** curriculum example of trying to change name not working
 
-//        Person person1 = new Person("John");
-//        Person person2 = person1;
-//        System.out.println(person1.getName());
-//        System.out.println(person2.getName());
-//        person2.setName("Jane");
-//        System.out.println(person1.getName());
-//        System.out.println(person2.getName());
+        Person person1 = new Person("John");
+        Person person2 = person1;
+        System.out.println(person1.getName());
+        System.out.println(person2.getName());
+//        fix "setName" method
+        person2.setName("Jane");
+        System.out.println(person1.getName());
+        System.out.println(person2.getName());
 
    }
 
