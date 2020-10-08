@@ -7,26 +7,32 @@ public class Movie {
 
 
 
-    //constructor
+//constructor
+//    setting rules; having two parameters
     public Movie(String _name, String _category){
+//  use this!
         this.name = _name;
         this.category = _category;
 
     }
-    //setters
-    public void setInfo(String title,String category){
- this.name = title;
- this.category = category;
+//getters(methods)
+    public String getName (){
+        return this.name;
     }
 
-//geters
-    public Movie getMovieById (Integer id){
-        Movie[] moviesList = new MoviesArray().findAll();
 
-
- return moviesList[id];
+    public String getCategory(){
+      return  this.category;
     }
 
+
+//setters(methods)
+
+    public void setName(String _name){
+        this.name= _name; }
+
+    public void setCategory(String _category){
+        this.category= _category; }
 
 
 }
