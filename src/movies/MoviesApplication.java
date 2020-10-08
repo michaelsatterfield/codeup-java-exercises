@@ -1,12 +1,13 @@
 package movies;
-
+//application
 import util.Input;
 
 import java.util.Scanner;
 
 public class MoviesApplication {
+    static Movie[] moviesList = new MoviesArray().findAll();
     public static void main(String[] args) {
-        Movie[] moviesList = new MoviesArray().findAll();
+
         System.out.println(moviesList);
         Input UserIn = new Input();
 
@@ -19,13 +20,44 @@ public class MoviesApplication {
                 "2 - view movies in the animated category\n" +
                 "3 - view movies in the drama category\n" +
                 "4 - view movies in the horror category\n" +
-                "5 - view movies in the scifi category\n" +
-                "\n" +
-                "Enter your choice: " );
-        String userChoice = Scan.next();
-        System.out.print(userChoice);
-        if(userChoice.equals(1)){
-            System.out.println(moviesList);
+                "5 - view movies in the scifi category\n");
+//        String userChoice = Scan.next();
+//        System.out.print(userChoice);
+        switch (UserIn.getInt(0, 5)) {
+            case 0:
+                System.exit(0);
+                break;
+            case 1:
+//                 class  var  |variable defined above
+                for(Movie movie : moviesList) {
+                    System.out.println(movie.getName() + " -- " + movie.getCategory());
+                }
+                break;
+            case 2:
+                printMovieByCategory("animated");
+            case 3:
+               printMovieByCategory("drama");
+                break;
+            case 4:
+               printMovieByCategory("horror");
+                break;
+            case 5:
+               printMovieByCategory("scifi");
+                break;
+            default:
+
+
+
+        }
+    }
+
+    public static void printMovieByCategory(String category) {
+        System.out.println("View movies in the " + category + " category");
+        for (Movie movie : moviesList) {
+            if (movie.getCategory().equalsIgnoreCase(category)) {
+                System.out.println(movie.getName() + " -- " + movie.getCategory());
+            }
+
         }
 
 
