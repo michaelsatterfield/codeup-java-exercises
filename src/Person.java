@@ -10,12 +10,12 @@ public class Person {
 
 //constructors**************************
 
-   public Person(String personName){
-       this.name = personName;
-       this.age = "unassigned";
-       this.gender = "unassigned";
-
-   }
+//   public Person(String personName){
+////       this.name = personName;
+////       this.age = "unassigned";
+////       this.gender = "unassigned";
+//
+//   }
     public Person(String personName,String personAge){
         this.name = personName;
         this.age = personAge;
@@ -26,6 +26,9 @@ public class Person {
         this.age = personAge;
         this.gender = personGender;
     }
+    public Person(String personName){
+       this.name = personName;
+    }
 
 // ******methods***
 
@@ -34,7 +37,7 @@ public class Person {
     }
 
     public String getName(){
-       return String.format("name: %s. age: %s, gender: %s", name, age, gender);
+       return this.name;
     }
     public String sayHello(){
         return String.format("Hello, World my name is %s. I'm %s years old, I am %s.", name, age, gender);
