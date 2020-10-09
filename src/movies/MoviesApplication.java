@@ -5,12 +5,12 @@ import util.Input;
 import java.util.Scanner;
 
 public class MoviesApplication {
+//    create a Method outside of main method(static)
     static Movie[] moviesList = new MoviesArray().findAll();
     public static void main(String[] args) {
 
         System.out.println(moviesList);
         Input UserIn = new Input();
-
         Scanner Scan = new Scanner(System.in);
 
         System.out.println("What would you like to do?\n" +
@@ -50,7 +50,7 @@ public class MoviesApplication {
 
         }
     }
-
+//method for for loop to filter the categories..not used multiple times;
     public static void printMovieByCategory(String category) {
         System.out.println("View movies in the " + category + " category");
         for (Movie movie : moviesList) {
