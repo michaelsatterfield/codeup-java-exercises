@@ -1,9 +1,9 @@
 package shapes;
 
 public class Square extends Rectangle{
-    public Square(double Rectangle,double Width){
-
-
+//    default constructor
+    public Square(double side){
+        super(side,side);
 
     }
 
