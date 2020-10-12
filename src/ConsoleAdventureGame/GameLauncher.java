@@ -25,8 +25,12 @@ public class GameLauncher {
        switch(UserIn.getInt(1,3)){
            case 1:
               listWeaponByNumber("Spear");
-
-
+              break;
+           case 2:
+               listWeaponByNumber("Knife");
+               break;
+           case 3:
+                listWeaponByNumber("Macuahuitl");
        }
 
 
