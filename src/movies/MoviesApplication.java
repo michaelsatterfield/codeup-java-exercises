@@ -9,7 +9,7 @@ public class MoviesApplication {
     static Movie[] moviesList = new MoviesArray().findAll();
     public static void main(String[] args) {
 
-        System.out.println(moviesList);
+
         Input UserIn = new Input();
         Scanner Scan = new Scanner(System.in);
 
