@@ -1,6 +1,7 @@
 package ConsoleAdventureGame;
 
 public class Weapons {
+    public String id;
     public String weaponChoice;
     public String strikeDistance;
     public String damagePoint;
@@ -8,14 +9,17 @@ public class Weapons {
 
 
 //constructor
-    public Weapons(String weapon, String distance, String damagePoints, String description) {
+    public Weapons(String choice, String weapon, String distance, String damagePoints, String description) {
+        this.id = choice;
         this.weaponChoice = weapon;
         this.strikeDistance = distance;
         this.damagePoint = damagePoints;
         this.weaponDescription = description;
     }
 //Getter
-
+    public String getChoice () {
+        return this.id;
+    }
     public String getWeaponChoice () {
         return this.weaponChoice;
     }
@@ -29,6 +33,10 @@ public class Weapons {
         return this.weaponDescription;
     }
 //Setter
+    public void setChoice(String id) {
+        this.id = id;
+    }
+
     public void setWeaponChoice(String weaponChoice) {
         this.weaponChoice = weaponChoice;
     }
