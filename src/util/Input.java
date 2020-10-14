@@ -19,9 +19,8 @@ public class Input {
     }
 
 
-
-    public boolean yesNo() {
-        System.out.println("please say yes or no.");
+    public boolean yesNo(String yesNo) {
+        System.out.println("yes or no.");
         String input = this.scanner.nextLine();
         return input.trim().equalsIgnoreCase("yes");
     }
@@ -62,6 +61,9 @@ public class Input {
             return Double.parseDouble(input);
 
         }
-    }
+
+
+
+}
 //
 

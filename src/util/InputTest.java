@@ -1,7 +1,5 @@
 package util;
 
-import java.util.Scanner;
-
 public class InputTest {
 //public class Input {
 //    private Scanner scanner;
@@ -9,7 +7,7 @@ public class InputTest {
     public static void main(String[] args) {
         Input input = new Input();
 
-       if(input.yesNo())
+       if(input.yesNo("Would you like to see another Student? Y/N"))
            System.out.println("this is true");
        else
            System.out.println("not true");
