@@ -36,7 +36,6 @@ public class Weapons {
     public void setChoice(String id) {
         this.id = id;
     }
-
     public void setWeaponChoice(String weaponChoice) {
         this.weaponChoice = weaponChoice;
     }
