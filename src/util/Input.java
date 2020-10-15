@@ -1,5 +1,6 @@
 package util;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Input {
@@ -35,23 +36,37 @@ public class Input {
                 return num;
         }
     }
-        public int getInt(){
+        public int getInt() {
             System.out.println("enter a number");
-            String input = scanner.nextLine();
-            int num = Integer.parseInt(input);
-            return num;
+//            String input = scanner.nextLine();
+//            int num = Integer.parseInt(input);
+            try {
 
+                int num = Integer.valueOf(getString());
+                return num;
+            } catch (NumberFormatException e) {
+                System.out.println("Try Again");
+//                e.printStackTrace();
+            }
+           return getInt();
         }
 
 
-        public double getDouble(double min, double max){
+        public double getDouble(double min, double max) {
             while (true) {
                 System.out.printf("Please enter a number between %f and %f", min, max);
 
-                String input = scanner.nextLine();
-                double num = Double.parseDouble(input);
-                if (num >= min && num <= max)
-                    return num;
+//                String input = scanner.nextLine();
+//                double num = Double.parseDouble(input);
+                try {
+                    double num = Double.parseDouble(getString());
+                    if (num >= min && num <= max)
+                        return num;
+                } catch (NumberFormatException e) {
+                    System.out.println("Not a valid number.");
+//                    e.printStackTrace();
+                    return getDouble(min,max);
+                }
             }
         }
 //
