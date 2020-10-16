@@ -6,51 +6,52 @@ import java.util.List;
 
 public  class Student {
 
-
     private  String name;
     private ArrayList<Integer> grades;
 
-
-    //    constructors
-    public  Student(String studentName) {
+    // constructors(create a new student)
+        public  Student(String studentName) {
         this.name = studentName;
+//     empty array list!
         this.grades = new ArrayList<>();
-
     }
-//        getters
-        public ArrayList getGrade(){return grades;};
 
 
-        public String getName(){ return name;}
+//     getters
+        public String getName(){ return this.name;}
 
+        public ArrayList getGrade(){return this.grades;};
 
-
-
-        public void addGrade(int grade) {grades.add(grade);};
-
+//••••••method for adding grade•••••••
+        public void addGrade(int grade){
+            grades.add(grade);
+        };
+//average grade
 
         public double getGradeAverage() {
 
-            double i;
-            for (i = 0; i < grades.size(); i++) {
-
+            double sum = 0;
+            for(int grade:this.grades){
+                sum += grade;
             }
-            return grades.size() * i;
-
+            return sum/ this.grades.size();
         }
 
     public static void main(String[] args) {
+//            !!!!!!new instance of Student object!!!!!
         Student Michael = new Student("Michael") ;
-        Student John = new Student("John");
-
-        John.addGrade(80);
-
-        System.out.println();
-//        ArrayList<Integer> grades = new ArrayList<>();
-
         Michael.addGrade(80);
         Michael.addGrade(70);
         Michael.addGrade(90);
+
+
+        Student John = new Student("John");
+        John.addGrade(80);
+
+        System.out.println();
+
+
+
 
         System.out.println(Michael.getName()+Michael.grades);
         System.out.println(Michael.getGradeAverage());
