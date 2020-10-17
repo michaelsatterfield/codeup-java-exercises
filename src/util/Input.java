@@ -14,6 +14,7 @@ public class Input {
     }
 
     public String getString() {
+        System.out.println("getstring working");
         return this.scanner.nextLine();
 
 //        String.format("User input is %s", scanner);
@@ -40,9 +41,9 @@ public class Input {
             System.out.println("enter a number");
 //            String input = scanner.nextLine();
 //            int num = Integer.parseInt(input);
+            int num;
             try {
-
-                int num = Integer.valueOf(getString());
+                num = Integer.parseInt(getString());
                 return num;
             } catch (NumberFormatException e) {
                 System.out.println("Try Again");
