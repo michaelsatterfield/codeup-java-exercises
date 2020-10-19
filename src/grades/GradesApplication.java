@@ -10,6 +10,8 @@ public class GradesApplication  {
     public static void main(String[] args) {
 
         HashMap<String, Student> students = new HashMap<>();
+
+
         Student Gordon = new Student("Gordon");
         Gordon.addGrade(100);
         Gordon.addGrade(72);

@@ -14,10 +14,9 @@ public class Input {
     }
 
     public String getString() {
-        System.out.println("getstring working");
+
         return this.scanner.nextLine();
 
-//        String.format("User input is %s", scanner);
     }
 
 
