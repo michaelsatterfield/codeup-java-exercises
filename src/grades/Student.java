@@ -20,7 +20,7 @@ public  class Student {
 //     getters
         public String getName(){ return this.name;}
 
-        public ArrayList getGrade(){return this.grades;};
+        public ArrayList<Integer> getGrade(){return this.grades;};
 
 //••••••method for adding grade•••••••
         public void addGrade(int grade){
