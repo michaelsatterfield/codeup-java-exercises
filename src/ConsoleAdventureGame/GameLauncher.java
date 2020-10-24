@@ -33,7 +33,8 @@ public class GameLauncher {
                 listWeaponByNumber("Macuahuitl");
        }
 
-
+        System.out.println("\n\nYou suspect they've been taken by warriors from the next village but are not sure.\n" +
+                "would you like to do? \n 1: proceed to the next village.\n 2: follow the river to the larger villages that eventually lead to the city states?");
     }
     public static void listWeaponByNumber(String weaponChoice) {
         System.out.println("You've Chosen : " + weaponChoice+"\n");
@@ -44,6 +45,10 @@ public class GameLauncher {
         }
 
     }
+
+
+
+
 
 }
 
