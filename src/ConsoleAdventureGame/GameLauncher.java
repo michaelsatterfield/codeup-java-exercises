@@ -2,6 +2,7 @@ package ConsoleAdventureGame;
 
 import util.Input;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class GameLauncher {
@@ -34,8 +35,21 @@ public class GameLauncher {
        }
 
         System.out.println("\n\nYou suspect they've been taken by warriors from the next village but are not sure.\n" +
-                "would you like to do? \n 1: proceed to the next village.\n 2: follow the river to the larger villages that eventually lead to the city states?");
+                  "would you like to do? \n 1: proceed to the next village.\n 2: follow the river to the larger villages that eventually lead to the city states?" );
+//        for (AdventureGame game : weaponsList) {
+//            System.out.println("   "+weapons.getChoice() +": "+ weapons.getWeaponChoice() + " • Strike Distance: " + weapons.getStrikeDistance() + " • Damage: " + weapons.getDamagePoint() + "\n   Description: " + weapons.getWeaponDescription() +"\n");
+//        }
+        switch(UserIn.getInt(1,2)){
+            case 1:
+                listWeaponByNumber("1: proceed to the next village.");
+                break;
+            case 2:
+                listWeaponByNumber("2: follow the river to the larger villages that eventually lead to the city states");
+                break;
+
+        }
     }
+
     public static void listWeaponByNumber(String weaponChoice) {
         System.out.println("You've Chosen : " + weaponChoice+"\n");
         for(Weapons weapons : weaponsList) {
