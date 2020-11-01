@@ -5,7 +5,7 @@ import util.Input;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class GameLauncher {
+public class GameLauncher extends WeaponsArray {
 //    method for listing weapons
     static Weapons[] weaponsList = new WeaponsArray().findAll();
 //

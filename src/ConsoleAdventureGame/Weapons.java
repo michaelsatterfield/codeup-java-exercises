@@ -1,6 +1,6 @@
 package ConsoleAdventureGame;
 
-public class Weapons {
+public class Weapons extends AdventureGame {
     public String id;
     public String weaponChoice;
     public String strikeDistance;
@@ -9,8 +9,8 @@ public class Weapons {
 
 
 //constructor
-    public Weapons(String choice, String weapon, String distance, String damagePoints, String description) {
-        this.id = choice;
+    public Weapons(String _id, String weapon, String distance, String damagePoints, String description) {
+        this.id = _id;
         this.weaponChoice = weapon;
         this.strikeDistance = distance;
         this.damagePoint = damagePoints;
